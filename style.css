@@ -1,0 +1,672 @@
+@font-face {
+    font-family: Nunito-reg;
+    src: url(assets/font/Nunito-Regular.ttf);
+}
+
+html{
+    font-family: Nunito-reg;
+}
+
+/* buat elemen html */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ /* disini untuk mengatur untuk tampilan 2 gambar */
+.kiri{
+    display: flex;
+}
+/*
+.kanan{
+    display: flex;
+    width: 80px;
+    height: 80px;
+} */
+
+nav{
+    display: flex;
+    background-color: black;
+    width: 100%;
+    justify-content:space-between;
+}
+/* sampai disini */
+/* disini dilanjut dengan menu cn dll */
+.nav_bar{
+    background-color: black;
+    padding: 5px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.consult-button {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 200px;
+    height: 45px;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.consult-button:hover{
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-3px);
+}
+
+.ad-apps{
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.ad-apps:hover{
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-3px);
+}
+/* sampai sini */
+/* disini untuk pencarian */
+.konten{
+    display: flex;
+    background-image: url(assets/img/Group\ 1.png);
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.konten h1{
+    color: white;
+    font-size: 50px;
+}
+
+.konten p{
+    color: white;
+    font-size: 25px;
+}
+
+.kotakputih{
+    background-color: white;
+    border-radius: 6px;
+    margin-top: 10px;
+    padding: 10px 18px;
+    width: 600px;
+}
+
+button{
+    padding: 8px;
+    background-color: #ff0000;
+    border-radius: 6px;
+    width: 200px;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+button:hover{
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    transform: translateY(-3px);
+}
+
+.dropdown{
+    display: flex;
+    padding: 10px;
+}
+
+.dropdown select{
+    margin-right: 30px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.text{
+    text-align: justify;
+    padding: 0px 8px;
+}
+/* selesai sampai disni */
+/* lanjut isi detail */
+.promotions {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.promo-item {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 25%;
+    display: flex;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+.kpr-calculator {
+    background-image: url(assets/img/dalam.png);
+    border-radius: 8px;
+    margin: auto;
+    justify-content: center;
+    width: 72%;
+}
+
+.calc{
+    padding: 70px;
+    justify-content: center;
+    display: flex;
+    column-gap: 50px;
+}
+
+.calc-detail{
+    background-color: white;
+    width: 400px;
+    height: 200px;
+    border-radius: 8px;
+}
+
+.calc-text{
+    margin: 30px;
+}
+
+.calc-text h2{
+    font-size: 30px;
+}
+
+.calc-text p{
+    color: #515151;
+    font-size: 18px;
+}
+
+.calc-text button a{
+    text-decoration: none;
+    color: white;
+}
+
+.calculate-button {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 15px;
+    width: 250px;
+}
+
+.bank-partners {
+    margin-top: 20px;
+}
+
+.bank-partners h3{
+    margin-bottom: 10px;
+}
+
+.bank{
+    display: grid;
+    grid-template-columns: 20% 20%  20% 20% 20%;
+    grid-template-rows: 20% 20%;
+    row-gap: 30px;
+    column-gap: 6px;
+    transition: transform 0.3s;
+}
+
+.bank img{
+    transition: transform 0.3s;
+}
+
+.bank img:hover{
+    transform: translateY(-5px);
+}
+
+.bank-partners img{
+    background-color: white;
+    border-radius: 5px;
+    width: 80px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.property-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 32px;
+}
+
+.property-list a{
+    text-decoration: none;
+    color: black;
+}
+
+.isi{
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.property-item {
+    width: 200px;
+    margin: 10px;    background-color: #fff;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.property-item:hover{
+    transform: translateY(-10px);
+}
+
+.property-item .text-detail{ 
+    font-size: 10px;
+    color: #515151;
+}
+
+.property-item img {
+    width: 100%;
+    height: auto;
+}
+
+.view-more-button {
+    background-color: #ffcc00;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    width: 1210px;
+    height: 45px;
+    font-size: 15px;
+    font-family: Nunito-reg;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.view-more-button:hover{
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    transform: translateY(-3px);
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.consult-button {
+    background-color: #FF0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.consult-button a{
+    color: white;
+    text-decoration: none;
+}
+
+.ad-apps{
+    font-family: Nunito-reg;
+    text-decoration: none;
+    color: white;
+    width: 150px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.ad-apps a{
+    color: white;
+    text-decoration: none;
+}
+
+.search-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.search-section h1 {
+    margin: 0;
+}
+
+.search-bar {
+    margin-bottom: 6px;
+
+}
+
+.search-suggestions {
+    position: absolute;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    width: 560px;
+}
+
+.search-suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.search-suggestion-item:hover {
+    background-color: #f0f0f0;
+}
+
+select{
+    border: none;
+}
+
+.search-bar input {
+    font-family: Nunito-reg;
+    padding: 10px;
+    width: 560px;
+    border-radius: 6px;
+    border-color: #ccc;
+    color: black;
+}
+
+
+.with-icon{
+    font-family: Nunito-reg;
+
+}
+
+/* selesai disini */
+/* disini untuk footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    justify-content: space-around;
+}
+
+.footer-section {
+    margin: 10px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+    color: #949494;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    color: #949494;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.payment-methods {
+    margin: 20px 0;
+}
+
+.payment-methods h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.payment-methods ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.payment-methods ul li {
+    margin: 5px;
+}
+
+.payment-methods ul li img {
+    height: 40px;
+    background-color: white;
+    border-radius: 5px;
+    width: 80px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.promo-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: none; /* Awalnya disembunyikan */
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+    animation: none;
+  }
+
+  .promo-card.show {
+    display: block;
+    animation: showPromo 0.3s forwards;
+  }
+
+  .promo-card.hide {
+    animation: hidePromo 0.3s forwards;
+  }
+
+  .promo-card img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 24px;
+    color: #333;
+  }
+
+  .close-btn:before {
+    content: '\00d7'; /* Karakter Unicode untuk ikon silang */
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none; /* Awalnya disembunyikan */
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .overlay.show {
+    display: block;
+    opacity: 1;
+  }
+
+  .overlay.hide {
+    opacity: 0;
+  }
+
+  @keyframes showPromo {
+    from {
+      transform: translate(-50%, -50%) scale(0);
+    }
+    to {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  @keyframes hidePromo {
+    from {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    to {
+      transform: translate(-50%, -50%) scale(0);
+    }
+  }
+
+/* CSS existing styles */
+
+/* Tambahkan di bagian bawah file CSS */
+@media (max-width: 768px) {
+    .nav_bar {
+        flex-direction: column;
+    }
+
+    .konten {
+        height: auto;
+        padding: 20px;
+    }
+
+    .konten h1 {
+        font-size: 30px;
+    }
+
+    .konten p {
+        font-size: 18px;
+    }
+
+    .kotakputih {
+        width: 90%;
+    }
+
+    .calc {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .calc-detail {
+        width: 90%;
+    }
+
+    .property-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .property-item {
+        width: 90%;
+    }
+
+    .bank {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .view-more-button {
+        width: 90%;
+    }
+
+    footer .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .konten h1 {
+        font-size: 24px;
+    }
+
+    .konten p {
+        font-size: 16px;
+    }
+
+    .kotakputih {
+        width: 95%;
+    }
+
+    .calc-detail {
+        width: 95%;
+    }
+
+    .property-item {
+        width: 95%;
+    }
+
+    .view-more-button {
+        width: 95%;
+    }
+}

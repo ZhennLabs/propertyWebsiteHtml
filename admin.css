@@ -1,0 +1,130 @@
+@font-face {
+    font-family: Nunito-reg;
+    src: url(assets/font/Nunito-Regular.ttf);
+}
+
+html {
+    font-family: Nunito-reg;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+#navbar{
+    border-bottom: 1px solid #ff0000;
+    font-family: Nunito-reg;
+}
+
+nav {
+    display: flex;
+    background-color: black;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.nav_bar {
+    background-color: black;
+    padding: 5px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu img {
+    margin: 20px;
+    margin-right: 5px;
+}
+
+.text h2 {
+    color: white;
+    text-decoration: none;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+#navbar ul li {
+    position: relative;
+}
+
+#navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    font-family: Nuito-reg;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ff0000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    box-shadow: 10px 10px 5px 3px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.konten{
+    row-gap: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.konten h2{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 50px;
+}
+
+.konten-table{
+    margin: 50px;
+}
+
+.konten-table h4{
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #ff0000;
+}
+
+tr:hover {
+    box-shadow: 10px 10px 5px 3px rgba(0, 0, 0, 0.5);
+}

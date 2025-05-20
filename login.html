@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="icon" type="image/png" href="assets/img/logo2.png">
+    <link rel="stylesheet" href="login-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Welcome Back!</h2>
+        <form action="/login" method="post">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="button" onclick="login()">Login</button>
+        </form>
+        <div class="extra-links">
+            <a href="#">Forgot password?</a>
+            <span>|</span>
+            <a href="#">Create an account</a>
+        </div>
+    </div>
+    <script>
+    let loginAttempts = 0
+    function login() {
+        const username = document.getElementById('username').value.toUpperCase();
+        const password = document.getElementById('password').value
+        const validUsername = 'HENOKH';
+        const validPassword = '2307411022'
+        for (let i = 0; i < 5; i++) {
+            if (username === validUsername && password === validPassword) {
+                alert('Login berhasil!');
+                window.location.href = 'admin.html';
+                return;
+            } else {
+                loginAttempts++;
+                if (username !== validUsername && password !== validPassword) {
+                    alert('Username dan password salah.');
+                } else if (username !== validUsername) {
+                    alert('Username salah.');
+                } else if (password !== validPassword) {
+                    alert('Password salah.');
+                }
+            
+            if (loginAttempts >= 5) {
+                alert('Anda telah mencapai batas maksimal kesalahan login. Silakan reset password Anda.');
+                window.location.href = 'login.html';
+                return;
+            }
+            break;
+        }
+    }
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+@font-face {
+    font-family: Nunito-reg;
+    src: url(assets/font/Nunito-Regular.ttf);
+}
+
+html {
+    font-family: Nunito-reg;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    background-color: black;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.nav_bar {
+    background-color: black;
+    padding: 5px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu img {
+    margin: 20px;
+    margin-right: 5px;
+}
+
+.text h2 {
+    color: white;
+    text-decoration: none;
+}
+
+.consult-button {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 20px;
+    border-radius: 6px;
+    width: 200px;
+    height: 45px;
+}
+
+.consult-button a{
+    color: white;
+    text-decoration: none;
+}
+
+#navigation {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    font-size: 20px;
+}
+
+#navigation h5 a{
+    color: black;
+    text-decoration: none;
+}
+
+.konten{
+    background-image: url(assets/img/Component\ 12.png);
+    background-position: center;
+    background-size: cover;
+    height: 20rem;
+}
+
+.text-calc{
+    position: absolute;
+    color: black;
+    top: 25%;
+    left: 20%;
+}
+
+.bank{
+    row-gap: 30px;
+    column-gap: 6px;
+    transition: transform 0.3s;
+}
+
+.bank img{
+    transition: transform 0.3s;
+}
+
+.bank img:hover{
+    transform: translateY(-5px);
+}
+
+.bank-partners img{
+    background-color: white;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: white;
+  }
+
+.container-calc{
+    display: flex;
+    gap: 20px;
+}
+
+.prosedur{
+  display: flex;
+  justify-content: center;
+}
+
+.prosedur-title{
+  margin-top: 150px;
+}
+
+.prosedur-title h1{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.prosedur-konten{
+  margin-top: 5px;
+}
+
+.prosedur-konten h3{
+  margin-bottom: 5px;
+}
+
+.prosedur-konten ul li{
+  color: #515151;
+}
+
+.form-group {
+  font-family: Nunito-reg;
+  margin-bottom: 15px;
+}
+.form-group label {
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+.form-group input {
+  font-family: Nunito-reg;
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  font-size: 16px;
+  width: 200px;
+}
+
+.form-group input::placeholder{
+    text-align: end;
+}
+
+.form-group input[type="number"] {
+  -moz-appearance: textfield;
+}
+.form-group input::-webkit-outer-spin-button,
+.form-group input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form-group button {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  color: black;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.form-group button:hover {
+  background-color: #0056b3;
+}
+
+.form-group select{
+  font-family: Nunito-reg;
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  font-size: 16px;
+  width: 200px;
+}
+
+.result {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: #e7f1ff;
+  color: black;
+  text-align: center;
+}
+.result span{
+  font-size: 40px;
+  font-family: Nunito-reg;
+}
+
+.faq {
+  background-color: #fff;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-bottom: 1px solid black;
+  width: 800px;
+}
+
+.answer {
+  color: #666;
+  font-size: 15px;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  justify-content: space-around;
+}
+
+.footer-section {
+  margin: 10px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+  color: #949494;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  color: #949494;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.payment-methods {
+  margin: 20px 0;
+}
+
+.payment-methods h3 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.payment-methods ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.payment-methods ul li {
+  margin: 5px;
+}
+
+.payment-methods ul li img {
+  height: 40px;
+  background-color: white;
+  border-radius: 5px;
+  width: 80px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  text-align: center;
+}

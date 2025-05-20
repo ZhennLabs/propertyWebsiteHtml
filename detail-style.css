@@ -1,0 +1,313 @@
+@font-face {
+    font-family: Nunito-reg;
+    src: url(assets/font/Nunito-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Nunito-reg;
+}
+
+nav {
+    display: flex;
+    background-color: black;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.nav_bar {
+    background-color: black;
+    padding: 5px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu img {
+    margin: 20px;
+    margin-right: 5px;
+}
+
+.text h2 {
+    color: white;
+    text-decoration: none;
+}
+
+.consult-button {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 20px;
+    border-radius: 6px;
+    width: 200px;
+    height: 45px;
+}
+
+.consult-button a{
+    color: white;
+    text-decoration: none;
+}
+
+#navigation {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    font-size: 20px;
+}
+
+#navigation h5 a{
+    color: black;
+    text-decoration: none;
+}
+
+.house1 {
+    width: 80%;
+    height: 600px;
+    border: 3px solid black;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+    border-radius: 8px;
+}
+
+.info{
+    float: left;
+    background-color: yellow;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+
+.info ul li{
+    list-style: none;
+    font-size: 15px;
+}
+
+canvas {
+    display: block;
+}
+
+.gallery{
+    display: flex;
+    gap: 15.5px;
+    justify-content: center;
+    margin: 20px;
+}
+
+.gallery img{
+    border: 1px solid black;
+    width: 248px;
+    height: 250px;
+    border-radius: 8px;
+}
+
+.detailing{
+    margin-left: 160px;
+    margin-right: 160px;
+}
+
+.text-content{
+    display: flex;
+    justify-content: space-between;    
+}
+
+.text-content .left p{
+    color: #919191;
+}
+
+.konsultasiwa{
+    border: 1px solid black;
+    width: 26.5rem;
+    padding: 20px;
+}
+
+.konsultasiwa button{
+    padding: 10px;
+    background-color: #128C7E;
+    color: white;
+    margin-top: 10px;
+}
+
+.text-detail{
+    display: flex;
+    gap: 14px;
+    padding-top: 20px;
+}
+
+.card{
+    padding: 10px;
+    width: 250px;
+    background-color: #DADADA;
+}
+
+.card h4{
+    color: #919191;
+}
+
+.small{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+hr{
+    margin-bottom: 20px;
+}
+
+.faq {
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-bottom: 1px solid black;
+  }
+  
+/* .faq:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+} */
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: black;
+}
+
+.answer {
+  color: #666;
+  font-size: 16px;
+}
+
+.property-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 32px;
+}
+
+.property-list a{
+    text-decoration: none;
+    color: black;
+}
+
+.isi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.property-item {
+    width: 200px;
+    margin: 10px;    background-color: #fff;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.property-item .text-detail{ 
+    font-size: 10px;
+    color: #515151;
+}
+
+.property-item img {
+    width: 100%;
+    height: auto;
+}
+
+.view-more-button {
+    background-color: #ffcc00;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    width: 1210px;
+    height: 45px;
+    font-size: 15px;
+    font-family: Nunito-reg;
+}
+
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    justify-content: space-around;
+}
+
+.footer-section {
+    margin: 10px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+    color: #949494;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    color: #949494;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.payment-methods {
+    margin: 20px 0;
+}
+
+.payment-methods h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.payment-methods ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.payment-methods ul li {
+    margin: 5px;
+}
+
+.payment-methods ul li img {
+    height: 40px;
+    background-color: white;
+    border-radius: 5px;
+    width: 80px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+}

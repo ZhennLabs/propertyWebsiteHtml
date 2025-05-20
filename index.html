@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CasaNexa</title>
+    <script src="main.js"></script>
+    <link rel="icon" type="image/png" href="assets/img/logo2.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-K15qoJ4OiRXDXdXUwF0H7H5fC2WqImf/vsuJ7lW4r/fh1yU6YDoTFOgdVKJ3d2GvK3Y+21oCjI6tZC5xjRi1Wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <section>
+        <div class="overlay" id="promoOverlay"></div>
+        <div class="promo-card" id="promoCard">
+          <button class="close-btn" id="closePromo"></button>
+          <img src="assets/img/flyer2.jpg" alt="Promotional Image">
+        </div>
+
+        <script>
+          if (!sessionStorage.getItem('promoDisplayed')) {
+            document.getElementById('promoCard').classList.add('show');
+            document.getElementById('promoOverlay').classList.add('show');
+          }
+      
+          document.getElementById('closePromo').addEventListener('click', function() {
+            document.getElementById('promoCard').classList.remove('show');
+            document.getElementById('promoCard').classList.add('hide');
+            document.getElementById('promoOverlay').classList.remove('show');
+            document.getElementById('promoOverlay').classList.add('hide');
+        
+            sessionStorage.setItem('promoDisplayed', 'true');
+          });
+      
+          document.getElementById('promoOverlay').addEventListener('transitionend', function() {
+            if (document.getElementById('promoOverlay').classList.contains('hide')) {
+              document.getElementById('promoOverlay').style.display = 'none';
+            }
+          });
+      
+          document.getElementById('promoCard').addEventListener('animationend', function() {
+            if (document.getElementById('promoCard').classList.contains('hide')) {
+              document.getElementById('promoCard').style.display = 'none';
+            }
+          });
+        </script>
+    </section>
+    
+    <!-- disini digunakan untuk tampilan gambar 2 kanan dan kiri -->
+    <div class="container">
+        <nav>
+            <div class="kiri">
+                <img src="assets/img/rumah_palu.png" alt="palu" width="700px" height="250px">
+            </div>
+            <div class="kanan">
+                <img src="assets/img/orang_rumah.png" alt="orang" width="450px" height="250px">
+            </div>   
+        </nav>
+    </div>
+    <!-- sampai sini -->
+     <!-- disini untuk mengatur untuk menu cn dll -->
+    <div class="nav_bar">
+        <div class="logo">
+            <img src="assets/img/logo2.png" alt="logo" width="90px" height="60px">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="https://www.google.com/maps?q=-6.435584007844113,106.83401566690105">Lokasi</a></li>
+                <li><a href="#simulasi-kpr">Simulasi KPR</a></li>
+            </ul>
+        </nav>
+        <a href="form.html" class="ad-apps">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_5202_136771)"><path d="M13 2.5C13 2.10218 13.158 1.72064 13.4393 1.43934C13.7206 1.15804 14.1022 1 14.5 1C14.8978 1 15.2794 1.15804 15.5607 1.43934C15.842 1.72064 16 2.10218 16 2.5V13.5C16 13.8978 15.842 14.2794 15.5607 14.5607C15.2794 14.842 14.8978 15 14.5 15C14.1022 15 13.7206 14.842 13.4393 14.5607C13.158 14.2794 13 13.8978 13 13.5V13.286C10.838 12.045 8.51 11.443 6.088 11.203L6.493 13.915C6.5202 14.0595 6.5152 14.2082 6.47837 14.3505C6.44154 14.4928 6.37378 14.6253 6.27992 14.7385C6.18605 14.8516 6.06839 14.9427 5.93532 15.0052C5.80224 15.0677 5.65702 15.1 5.51 15.1H4.962C4.76762 15.1 4.57746 15.0433 4.41478 14.9369C4.2521 14.8306 4.12395 14.6791 4.046 14.501L2.196 11.011C2.12867 11.0099 2.06133 11.0089 1.994 11.008C1.46436 11.0027 0.95812 10.7891 0.584905 10.4132C0.211691 10.0374 0.00155184 9.52966 0 9L0 7C0.00178478 6.47029 0.21157 5.96248 0.584163 5.58596C0.956756 5.20944 1.46234 4.99434 1.992 4.987C2.82003 4.97577 3.64781 4.95077 4.475 4.912C7.518 4.758 10.623 4.063 13 2.713V2.5ZM14 2.5V13.5C14 13.6326 14.0527 13.7598 14.1464 13.8536C14.2402 13.9473 14.3674 14 14.5 14C14.6326 14 14.7598 13.9473 14.8536 13.8536C14.9473 13.7598 15 13.6326 15 13.5V2.5C15 2.36739 14.9473 2.24021 14.8536 2.14645C14.7598 2.05268 14.6326 2 14.5 2C14.3674 2 14.2402 2.05268 14.1464 2.14645C14.0527 2.24021 14 2.36739 14 2.5ZM13 3.85C10.656 5.055 7.791 5.692 5 5.883V10.116C5.18 10.126 5.359 10.138 5.537 10.152C8.105 10.341 10.63 10.896 13 12.145V3.85ZM4 10.065V5.935C3.3362 5.95929 2.67216 5.97662 2.008 5.987C1.74077 5.99014 1.48545 6.09803 1.29695 6.28747C1.10844 6.47691 1.00182 6.73276 1 7V9C1 9.55 1.448 10.002 2.006 10.009C2.67093 10.0167 3.33569 10.0354 4 10.065ZM3.343 11.04L4.952 14.077L4.962 14.101H5.51L5.508 14.087L5.065 11.121C4.49137 11.0864 3.91732 11.0591 3.343 11.039V11.04Z" fill="#fff"></path></g><defs><clipPath id="clip0_5202_136771"><rect width="16" height="16" fill="white"></rect></clipPath></defs>
+        </svg> Pasang Iklan</a>
+        <button class="consult-button"><a href="https://wa.me/6285215350287?text=Halo%20saya%20tertarik%20dengan%20properti%20Anda">Konsultasi Sekarang</a></button>
+    </div>
+    <!-- sampai disni -->
+     <!-- disini akan mengisi pencarian -->
+     <div class="konten">
+        <h1>Jual Beli Properti Hunianmu</h1>
+        <p>Konsultasikan hunian impianmu bersama kami</p>
+        <div class="kotakputih">
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Mau cari properti apa?" oninput="showSuggestions()">
+                <div class="search-suggestions" id="searchSuggestions"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const properties = [
+            { name: 'Green Cilodong', location: 'Jl. Swadaya, Kelodan', url: 'detail.html'},
+            { name: 'Blue Residence', location: 'Jl. Indah, Bandung' },
+            { name: 'Red Villa', location: 'Jl. Merah, Jakarta' }
+        ];
+
+        function showSuggestions() {
+    const query = document.getElementById('search').value.toLowerCase();
+    const suggestions = document.getElementById('searchSuggestions');
+    suggestions.innerHTML = ''; // Clear previous suggestions
+
+    if (query) {
+        const filteredProperties = properties.filter(property =>
+            property.name.toLowerCase().includes(query) || 
+            property.location.toLowerCase().includes(query)
+        );
+
+        filteredProperties.forEach(property => {
+            const suggestionItem = document.createElement('div');
+            suggestionItem.classList.add('search-suggestion-item');
+            suggestionItem.textContent = `${property.name} - ${property.location}`;
+            suggestionItem.addEventListener('click', () => {
+                window.location.href = property.url; // Redirect to the property detail page
+            });
+            suggestions.appendChild(suggestionItem);
+        });
+
+        suggestions.style.display = filteredProperties.length > 0 ? 'block' : 'none';
+    } else {
+        suggestions.style.display = 'none';
+    }
+}
+
+    </script>
+    <!-- selesai sampai sini -->
+     <!-- disini untuk detail isi -->
+     <section class="promotions">
+        <div class="promo-item">
+            <div class="wallet">
+                <img src="assets/img/Wallet.png" alt="wallet">
+            </div>
+            <div class="text">
+            <p class="bold">Cashback up to 10 JT</p>
+            <span>Dapatkan cashback untuk furniture & exterior design</span>
+            </div>
+        </div>
+        <div class="promo-item">
+            <div class="protek">
+                <img src="assets/img/Shield.png" alt="protek">
+            </div>
+            <div class="text">
+            <p class="bold">Booking Fee Protection</p>
+            <span>Dapatkan cashback untuk furniture & exterior design</span>
+            </div>
+        </div>
+        <div class="promo-item">
+            <div class="home">
+                <img src="assets/img/Home.png" alt="home">
+            </div>
+            <div class="text">
+            <p class="bold">Multi Visit Service</p>
+            <span>Dapatkan cashback untuk furniture & exterior design</span>
+            </div>
+        </div>
+    </section>
+    <section class="kpr-calculator" id="simulasi-kpr">
+        <div class="calc">
+            <div class="calc-detail">
+                <div class="calc-text">
+                    <h2>Kalkulator KPR</h2>
+                    <p>Simulasi KPR sesuai bank, hitung biaya cicilan angsuran & cari properti impianmu.</p>
+                    <button class="calculate-button"><a href="perhitungankpr.html">Lakukan perhitungan KPR</a></button>
+                </div>
+            </div>
+            <div class="bank-partners">
+                <h3>Bank partner KPR :</h3>
+                <div>
+                    <div class="bank">
+                        <img src="assets/img/bca.png" alt="Bank Partners">
+                        <img src="assets/img/mandiri.png" alt="Bank Partners">
+                        <img src="assets/img/bni.png" alt="Bank Partners">
+                        <img src="assets/img/btn.png" alt="Bank Partners">
+                        <img src="assets/img/bri.png" alt="Bank Partners">
+                        <img src="assets/img/permata.png" alt="Bank Partners">
+                        <img src="assets/img/cimb.png" alt="Bank Partners">
+                        <img src="assets/img/ocbc.png" alt="Bank Partners">
+                        <img src="assets/img/btnlagi.png" alt="Bank Partners">
+                        <img src="assets/img/bsi.png" alt="Bank Partners">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="didalam">
+            <img src="assets/img/dalam.png" alt="rumah" width="1210px" height="340px">
+        </div> -->
+    </section>
+    <div class="isi">
+    <section class="property-list">
+        <a href="detail.html">
+            <div class="property-item">
+                <img src="assets/img/rumah.png" alt="House">
+                <h3>Green Cilodong</h3>
+                <p class="text-detail">Jl. Swadaya, Kelodan</p>
+                <p><b>1.2M - 1.4M</b></p>
+                <p class="text-detail">Cicilan 12x3jt</p>
+                <hr style="margin-top: 10px;">
+                <p class="text-detail" style="text-align: center; margin-top: 10px;"><b>LT 85-120m2 LB 100-120m2</b></p>
+            </div>
+        </a>
+        <a href="detail.html">
+            <div class="property-item">
+                <img src="assets/img/rumah.png" alt="House">
+                <h3>Green Cilodong</h3>
+                <p class="text-detail">Jl. Swadaya, Kelodan</p>
+                <p><b>1.2M - 1.4M</b></p>
+                <p class="text-detail">Cicilan 12x3jt</p>
+                <hr style="margin-top: 10px;">
+                <p class="text-detail" style="text-align: center; margin-top: 10px;"><b>LT 85-120m2 LB 100-120m2</b></p>
+            </div>
+        </a>
+        <a href="detail.html">
+            <div class="property-item">
+                <img src="assets/img/rumah.png" alt="House">
+                <h3>Green Cilodong</h3>
+                <p class="text-detail">Jl. Swadaya, Kelodan</p>
+                <p><b>1.2M - 1.4M</b></p>
+                <p class="text-detail">Cicilan 12x3jt</p>
+                <hr style="margin-top: 10px;">
+                <p class="text-detail" style="text-align: center; margin-top: 10px;"><b>LT 85-120m2 LB 100-120m2</b></p>
+            </div>
+        </a>
+        <a href="detail.html">
+            <div class="property-item">
+                <img src="assets/img/rumah.png" alt="House">
+                <h3>Green Cilodong</h3>
+                <p class="text-detail">Jl. Swadaya, Kelodan</p>
+                <p><b>1.2M - 1.4M</b></p>
+                <p class="text-detail">Cicilan 12x3jt</p>
+                <hr style="margin-top: 10px;">
+                <p class="text-detail" style="text-align: center; margin-top: 10px;"><b>LT 85-120m2 LB 100-120m2</b></p>
+            </div>
+        </a>
+        <a href="detail.html">
+            <div class="property-item">
+                <img src="assets/img/rumah.png" alt="House">
+                <h3>Green Cilodong</h3>
+                <p class="text-detail">Jl. Swadaya, Kelodan</p>
+                <p><b>1.2M - 1.4M</b></p>
+                <p class="text-detail">Cicilan 12x3jt</p>
+                <hr style="margin-top: 10px;">
+                <p class="text-detail" style="text-align: center; margin-top: 10px;"><b>LT 85-120m2 LB 100-120m2</b></p>
+            </div>
+        </a>
+    </section>
+    <!-- selesai disini -->
+     <!-- disini untuk footer -->
+     <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>CasaNexa</h3>
+                <ul>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Kebijakan Privasi</a></li>
+                    <li><a href="#">Artikel</a></li>
+                    <li><a href="#">Help Center</a></li>
+                </ul>
+            </div>
+            <div class="footer-section" style="margin-left: 80px;">
+                <h3>Properti</h3>
+                <ul>
+                    <li><a href="#">Simulasi KPR</a></li>
+                    <li><a href="#">Simulasi KPR BCA</a></li>
+                    <li><a href="#">Simulasi KPR Mandiri</a></li>
+                    <li><a href="#">Simulasi KPR BNI</a></li>
+                    <li><a href="#">Simulasi KPR BTN</a></li>
+                    <li><a href="#">Simulasi KPR Danamon</a></li>
+                    <li><a href="#">Simulasi KPR CIMB</a></li>
+                    <li><a href="#">Simulasi KPR OCBC</a></li>
+                    <li><a href="#">Simulasi KPR BSI</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Kontak Kami</h3>
+                <ul>
+                    <li>(021) xxx xxx</li>
+                    <li>casanexa@gmail.com</li>
+                    <li>Senin - Jumat: 06.00 - 21.00</li>
+                </ul>
+            </div>
+        </div>
+        <div class="payment-methods">
+            <h3>Metode Pembayaran:</h3>
+            <ul>
+                <li><img src="assets/img/bca.png" alt="BCA"></li>
+                <li><img src="assets/img/mandiri.png" alt="Mandiri"></li>
+                <li><img src="assets/img/bni.png" alt="BNI"></li>
+                <li><img src="assets/img/btn.png" alt="BTN"></li>
+                <li><img src="assets/img/bri.png" alt="BRI"></li>
+                <li><img src="assets/img/ocbc.png" alt="OCBC"></li>
+                <li><img src="assets/img/btnlagi.png" alt="BTN LAGI"></li>
+                <li><img src="assets/img/bsi.png" alt="BSI"></li>
+                <li><img src="assets/img/permata.png" alt="PERMATA"></li>
+                <li><img src="assets/img/cimb.png" alt="CIMB"></li>
+            </ul>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <p>Copyright 2024 &copy; IT Team Politeknik Negeri Jakarta</p>
+        </div>
+    </footer>
+    <!-- selesai -->
+</body>
+</html>
